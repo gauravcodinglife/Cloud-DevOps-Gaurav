@@ -72,6 +72,6 @@ systemctl status kubelet
 
 ---
 
-📅 Last Updated: 2025  
+📅 Last Updated: 2026
 👤 Author: Gaurav
 ```
