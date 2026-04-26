@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="image/k8s.png" width="750">
-</p>
+![Kubernetes Architecture](images/k8s.png)
 
 # 📘 Kubernetes Architecture Deep Dive
 
