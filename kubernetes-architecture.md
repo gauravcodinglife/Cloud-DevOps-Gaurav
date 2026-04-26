@@ -13,28 +13,7 @@ To move beyond basic `kubectl` commands and understand the internal communicatio
 
 🏗️ Cluster Overview
 
-A Kubernetes cluster is divided into two main parts: the **Control Plane** (decision maker) and the **Worker Nodes** (work executors).
-
-```mermaid
-flowchart TD
-    subgraph ControlPlane["Control Plane"]
-        API["API Server (6443)"]
-        ETCD["etcd (2379)"]
-        SCH["Scheduler"]
-        CM["Controller Manager"]
-    end
-
-    subgraph WorkerNodes["Worker Nodes"]
-        Node1["Node 1"]
-        Node2["Node 2"]
-    end
-
-    User((Admin)) -->|kubectl| API
-    API <--> ETCD
-    API --> SCH
-    API --> CM
-    API --> Node1
-    API --> Node2
+A Kubernetes cluster is divided into two main parts: the Control Plane (decision maker) and the Worker Nodes (work executors).
 
 ---
 
