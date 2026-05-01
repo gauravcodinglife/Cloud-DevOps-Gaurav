@@ -1,5 +1,5 @@
 ```markdown
-# 👋 Cloud&DevOps-Gaurav
+# 👋 DevOps-Gaurav
 
 ### 🔧 Cloud DevOps Engineer | AWS | Kubernetes | CI/CD | Infrastructure as Code
 
@@ -33,9 +33,74 @@ This repository documents my **practical learning journey** with real-world impl
 
 ---
 
+## 📂 Featured Projects
+
+### 🔐 1. Secure AWS CloudShell Operations
+**Focus:** IAM Security, S3 Operations, Secretless CLI Authentication
+
+- ✅ Implemented secretless AWS CLI operations using CloudShell
+- ✅ Eliminated hardcoded credentials from scripts
+- ✅ Demonstrated SigV4 request signing & IAM role assumption
+- ✅ Validated region-aware infrastructure deployment
+
+📄 **[View Documentation →](./cloudshell-practical.md)**
+
 ---
 
-## 📊 GitHub Stats
+### ⚙️ 2. Kubernetes Architecture Design
+**Focus:** Container Orchestration, Cluster Design, Scaling
+
+- ✅ Designed production-ready K8s cluster architecture
+- ✅ Implemented pod security policies & network policies
+- ✅ Configured HPA for auto-scaling workloads
+
+📄 **[View Documentation →](./kubernetes-architecture.md)**
+
+---
+
+## 🧪 Hands-On Labs
+
+| Lab | Topic | Status |
+| :--- | :--- | :--- |
+| **Lab 01** | AWS CloudShell Secure CLI | ✅ Completed |
+| **Lab 02** | S3 Bucket Operations & Versioning | ✅ Completed |
+| **Lab 03** | IAM Role & Policy Configuration | ✅ Completed |
+| **Lab 04** | EC2 Instance Management via CLI | ✅ Completed |
+| **Lab 05** | Region & Endpoint Configuration | ✅ Completed |
+| **Lab 06** | Kubernetes Pod Deployment | 🔄 In Progress |
+| **Lab 07** | CI/CD Pipeline with Jenkins | 🔄 In Progress |
+| **Lab 08** | Terraform Infrastructure Provisioning | 🔄 In Progress |
+
+---
+
+## 📈 Learning Journey
+
+### #90DaysOfCloudDevOps Challenge
+
+Documenting my journey mastering Cloud DevOps through **daily hands-on practice**:
+
+- **Days 1-30:** AWS Core Services & Security
+- **Days 31-60:** Kubernetes & Container Orchestration
+- **Days 61-90:** CI/CD, Monitoring & Production Pipelines
+
+📌 *Each project includes practical implementation with screenshots and technical deep-dives.*
+
+---
+
+## 🔒 Security Best Practices Implemented
+
+```bash
+✅ No hardcoded AWS credentials in scripts
+✅ IAM roles with least-privilege permissions
+✅ SigV4 request signing for API calls
+✅ CloudShell managed sessions for authentication
+✅ Region-specific resource deployment
+✅ CloudTrail logging for audit compliance
+```
+
+---
+
+##  GitHub Stats
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=gauravcodinglife&show_icons=true&theme=dark)
 
