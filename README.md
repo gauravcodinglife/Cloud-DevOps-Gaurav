@@ -1,4 +1,3 @@
-```markdown
 # 👋 DevOps-Gaurav
 
 ###  Cloud DevOps Engineer | AWS | Kubernetes | CI/CD | Infrastructure as Code
