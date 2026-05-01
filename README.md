@@ -1,12 +1,9 @@
 ```markdown
 # 👋 DevOps-Gaurav
 
-### 🔧 Cloud DevOps Engineer | AWS | Kubernetes | CI/CD | Infrastructure as Code
+###  Cloud DevOps Engineer | AWS | Kubernetes | CI/CD | Infrastructure as Code
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gaurav-chavan-codinglife)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gauravcodinglife)
-[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@codinggaurav85)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:codinggaurav85@gmail.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/gaurav-chavan-codinglife) &nbsp;|&nbsp; 🐙 [GitHub](https://github.com/gauravcodinglife) &nbsp;|&nbsp; ✍️ [Medium](https://medium.com/@codinggaurav85) &nbsp;|&nbsp; 📧 [Email](mailto:codinggaurav85@gmail.com)
 
 ---
 
@@ -33,7 +30,7 @@ This repository documents my **practical learning journey** with real-world impl
 
 ---
 
-## 📂 Featured Projects
+##  Featured Projects
 
 ### 🔐 1. Secure AWS CloudShell Operations
 **Focus:** IAM Security, S3 Operations, Secretless CLI Authentication
@@ -47,7 +44,7 @@ This repository documents my **practical learning journey** with real-world impl
 
 ---
 
-### ⚙️ 2. Kubernetes Architecture Design
+### ️ 2. Kubernetes Architecture Design
 **Focus:** Container Orchestration, Cluster Design, Scaling
 
 - ✅ Designed production-ready K8s cluster architecture
@@ -100,7 +97,7 @@ Documenting my journey mastering Cloud DevOps through **daily hands-on practice*
 
 ---
 
-##  GitHub Stats
+## 📊 GitHub Stats
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=gauravcodinglife&show_icons=true&theme=dark)
 
@@ -119,7 +116,7 @@ Documenting my journey mastering Cloud DevOps through **daily hands-on practice*
 
 ---
 
-## 📄 License
+##  License
 
 This repository is open source and available under the [MIT License](LICENSE).
 
@@ -133,3 +130,18 @@ This repository is open source and available under the [MIT License](LICENSE).
 
 </div>
 ```
+
+---
+
+## ✅ How to Update on GitHub
+
+1.  Go to: `https://github.com/gauravcodinglife/DevOps-Gaurav`
+2.  Click **`README.md`** file
+3.  Click **Pencil Icon** (Edit)
+4.  **Delete everything** (Ctrl+A → Delete)
+5.  **Paste** the code above
+6.  Click **Preview** tab to see how it looks
+7.  Click **Commit changes**
+8.  Go back to **main repo page** and scroll down
+
+---
