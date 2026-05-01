@@ -42,32 +42,41 @@ Understanding the security boundary between the CLI and AWS Infrastructure is cr
 
 ---
 
-##  Implementation & Lab Demos
+## 🛠 Implementation & Lab Demos
 
 ### 1️⃣ CloudShell Environment Initialization
 Launching the managed shell environment. The interface provides immediate access to AWS tools without login prompts.
 ![CloudShell Interface](images/cloudshell1.jpg)
 
-### 2️⃣ IAM Identity Verification
-Verifying the active identity and permissions linked to the session. This ensures the principle of least privilege is maintained.
-![IAM Verification](images/cloudshell2.jpg)
+---
 
-### 3️⃣ Secretless S3 Bucket Creation
-Executing infrastructure changes without exposing credentials. The script uses dynamic naming for uniqueness.
-![S3 Creation Command](images/cloudshell3.jpg)
+### 2️⃣ S3 Operations & File Uploads
+Executing secure file transfers and bucket operations without hardcoded credentials. Demonstrates `aws s3 cp` and `aws s3 ls`.
+![S3 Operations](images/cloudshell2.jpg)
 
-### 4️⃣ Operation Verification
-Confirming the resource creation via CLI output. The success response indicates proper IAM policy attachment.
-![Command Output](images/cloudshell4.jpg)
+---
 
-### 5️⃣ Region & Configuration Check
-Validating the region context (`ap-south-1`) to ensure resources are deployed in the correct compliance boundary.
-![Region Config](images/cloudshell5.jpg)
+### 3️⃣ Infrastructure Context Verification
+Verifying compute resources and instance metadata using EC2 CLI commands. Ensures CLI has correct permissions to query infrastructure.
+![EC2 Verification](images/cloudshell3.jpg)
 
-### 6️⃣ Console State Sync
+---
+
+### 4️⃣ Region Configuration & Routing
+Validating region context (`ap-south-1`, `eu-north-1`) to ensure resources are deployed in the correct compliance boundary.
+![Region Config](images/cloudshell4.jpg)
+
+---
+
+### 5️⃣ IAM Identity & Permission Check
+Confirming the active identity using `aws sts get-caller-identity`. Ensures the session is using the expected IAM Role.
+![IAM Identity](images/cloudshell5.jpg)
+
+---
+
+### 6️ Console State Sync
 Final verification in the AWS Console. The infrastructure state matches the CLI execution, confirming API consistency.
 ![Console Verification](images/cloudshell6.jpg)
-
 ---
 
 ## 💻 Code Snippet: Dynamic Bucket Creation
