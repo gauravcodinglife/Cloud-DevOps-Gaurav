@@ -368,7 +368,9 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 80
+
 ```
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/9c134477-c42c-4567-811d-572e6d1f9089" />
 
 ### Commands
 
@@ -637,7 +639,7 @@ Handling connection for 9090
 > 📸 **Screenshot:**
 >
 > <img width="4160" height="2340" alt="image" src="https://github.com/user-attachments/assets/7cd20cc6-3f1f-4598-b5f2-4417c866fbf0" />
-
+> <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/dbeb9fd5-9711-4d04-8cf9-fbe6fb282975" />
 
 ---
 
