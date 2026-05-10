@@ -6,6 +6,8 @@
 ![DevOps](https://img.shields.io/badge/DevOps-Practical-green?style=for-the-badge)
 
 ---
+<img width="1394" height="768" alt="image" src="https://github.com/user-attachments/assets/be7ff53e-aed8-4f9d-98db-8a5a13092f41" />
+
 
 ## 📌 Table of Contents
 
@@ -149,7 +151,8 @@ tech-worker3         Ready    <none>          3h32m   v1.31.2
 
 > 📸 **Screenshot:**
 >
-> `[images/cluster-nodes.png]`
+> <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/c90e8628-5c81-432f-be96-2f2150be267d" />
+
 
 ---
 
@@ -222,7 +225,8 @@ error: resource name may not be empty
 
 > 📸 **Screenshot:**
 >
-> `[images/namespace-created.png]`
+> <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/3808f259-cac1-4a7f-9e63-0c1e88263c21" />
+
 
 ---
 
@@ -294,7 +298,9 @@ nginx-pod   1/1     Running   0          5s ✅
 
 > 📸 **Screenshot:**
 >
-> `[images/pod-running.png]`
+> <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/8456146e-36bb-4b26-9bac-9f35d104ddb6" />
+
+
 
 ---
 
@@ -391,7 +397,8 @@ pod/static-app-deployment-54bf7f7975-xdx6m 1/1   Running  0         25m
 
 > 📸 **Screenshot:**
 >
-> `[images/deployment-created.png]`
+> <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/a205487a-817e-4f33-8683-4dbe0695977e" />
+
 
 ---
 
@@ -458,7 +465,8 @@ static-app-deployment-54bf7f7975-zmrmv      1/1    Running  4s  ← NEW POD ✅
 
 > 📸 **Screenshot:**
 >
-> `[images/self-healing.png]`
+> <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/a5c76cec-1826-477e-a909-d526daa36a10" />
+
 
 ---
 
@@ -529,7 +537,8 @@ static-app-service   NodePort   10.96.45.123   80:30080/TCP   5s
 
 > 📸 **Screenshot:**
 >
-> `[images/service-roundrobin.png]`
+> <img width="1529" height="702" alt="image" src="https://github.com/user-attachments/assets/de375b8c-2a1b-455c-874a-c18dd69db984" />
+
 
 ---
 
@@ -577,10 +586,6 @@ Scale Up:    3 ──────────────────► 10 pods
 Scale Down:  10 ─────────────────►  3 pods  (instant)
 Downtime:    ZERO throughout ✅
 ```
-
-> 📸 **Screenshot:**
->
-> `[images/scaling.png]`
 
 ---
 
@@ -631,7 +636,8 @@ Handling connection for 9090
 
 > 📸 **Screenshot:**
 >
-> `[images/website-running.png]`
+> <img width="4160" height="2340" alt="image" src="https://github.com/user-attachments/assets/7cd20cc6-3f1f-4598-b5f2-4417c866fbf0" />
+
 
 ---
 
