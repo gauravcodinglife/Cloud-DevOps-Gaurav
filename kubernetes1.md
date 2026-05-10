@@ -1,7 +1,3 @@
-Here is the complete `kubernetes1.md` file:
-
-```markdown
-# ☸️ Kubernetes Practical – Day 14
 
 > **#90DaysOfCloudDevOps** | Hands-on Kubernetes with KIND Cluster
 
