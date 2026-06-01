@@ -8,7 +8,8 @@
 ---
 
 > 📸 **App Running Live:**
->
+><img width="4160" height="2340" alt="image" src="https://github.com/user-attachments/assets/17718599-f962-44f8-81f4-138443a27164" />
+
 > <!-- Image 3: InfraLens app live in browser at 13.206.233.135:3000 -->
 
 ## 📌 Table of Contents
@@ -17,10 +18,8 @@
 - [The App – InfraLens](#-the-app--infralens)
 - [Practical 1 – Dockerizing the App](#-practical-1--dockerizing-the-app)
 - [Practical 2 – Security Scanning with Trivy](#-practical-2--security-scanning-with-trivy)
-- [Practical 3 – SSH & EC2 Setup](#-practical-3--ssh--ec2-setup)
-- [Practical 4 – Writing Kubernetes YAMLs](#-practical-4--writing-kubernetes-yamls)
-- [Practical 5 – Deploying to Kubernetes](#-practical-5--deploying-to-kubernetes)
-- [Mistakes I Made](#-mistakes-i-made)
+- [Practical 3 – Writing Kubernetes YAMLs](#-practical-4--writing-kubernetes-yamls)
+- [Practical 4 – Deploying to Kubernetes](#-practical-5--deploying-to-kubernetes)
 - [Key Concepts](#-key-concepts)
 - [Interview Questions](#-interview-questions)
 - [Cheatsheet](#-cheatsheet)
@@ -99,7 +98,7 @@ Final image contains:                    COPY --from=deps node_modules ./
 
 Before building, always set up `.dockerignore` to exclude unnecessary files.
 
-> 📸 **Screenshot — `.dockerignore` + docker build running:**
+<img width="4160" height="2340" alt="image" src="https://github.com/user-attachments/assets/6afe7cb4-acb2-4d85-9c5b-44cdce7b7e72" />
 >
 > <!-- Image 1: cat .dockerignore + docker build -t infralens . steps 1/18 to 9/18 -->
 
@@ -214,7 +213,7 @@ trivy image --severity HIGH,CRITICAL codinggaurav/infralens:latest
 
 ### Scan Results
 
-> 📸 **Screenshot — Trivy scan output with vulnerability table:**
+<img width="4160" height="2340" alt="image" src="https://github.com/user-attachments/assets/7f6f73ab-0f81-4dfe-9c79-c98ea7c222d4" />
 >
 > <!-- Image 2: trivy fs . showing 14 vulnerabilities in package-lock.json -->
 
@@ -263,76 +262,11 @@ Code → Build       Code → Scan → Build → Scan Image → Deploy
 
 ---
 
-## 🖥️ Practical 3 – SSH & EC2 Setup
-
-### Setting Up SSH Between Machines
-
-> 📸 **Screenshot — SSH setup, port verification, scp file transfer:**
->
-> <!-- Image 5: systemctl start ssh, ss -tulnp showing ports 22/80/8080, scp hello.txt transfer -->
-
-```bash
-# Start SSH service on remote machine
-sudo systemctl start ssh
-
-# Verify SSH is listening on port 22
-ss -tulnp | grep 22
-
-# Output
-tcp   LISTEN  0  4096  0.0.0.0:22  0.0.0.0:*
-tcp   LISTEN  0  4096  [::]:22     [::]:*
-```
-
-### What is `ss -tulnp`?
-
-```
-ss   = socket statistics (replacement for netstat)
--t   = TCP sockets
--u   = UDP sockets
--l   = listening sockets only
--n   = show port numbers (not service names)
--p   = show process using the socket
-
-Output from the scan shows ports open:
-:22    → SSH ✅
-:80    → HTTP (app)
-:8080  → alternate HTTP
-:3000  → Next.js app (InfraLens)
-```
-
-### SCP – Copying Files to Remote
-
-```bash
-# Copy file from local to remote EC2
-scp hello.txt gaurav@172.24.148.85:/tmp/.
-
-# Output
-The authenticity of host '172.24.148.85' can't be established.
-ED25519 key fingerprint is SHA256:...
-Are you sure you want to continue? yes
-
-hello.txt     100%    9    7.1KB/s   00:00
-```
-
-```
-scp = Secure Copy Protocol
-      Uses SSH tunnel to transfer files
-
-Syntax: scp <local-file> <user>@<host>:<remote-path>
-
-Common uses:
-  scp file.txt user@host:/tmp/         → local to remote
-  scp user@host:/var/log/app.log ./    → remote to local
-  scp -r ./folder user@host:/home/     → copy entire folder
-```
-
----
-
-## 📝 Practical 4 – Writing Kubernetes YAMLs
+## 📝 Practical 3 – Writing Kubernetes YAMLs
 
 ### The Three Files
 
-> 📸 **Screenshot — `cat deployment.yml`, `cat ns.yml`, `cat service.yml`:**
+<img width="4032" height="3024" alt="image" src="https://github.com/user-attachments/assets/237dc3bc-2cdb-4c62-a0ca-97cf3367d2ea" />
 >
 > <!-- Image 4: terminal showing all three YAML files cat'd in sequence -->
 
@@ -430,7 +364,7 @@ If labels match      → Service finds all pods   → Traffic routed correctly �
 
 ---
 
-## 🚀 Practical 5 – Deploying to Kubernetes
+## 🚀 Practical 4 – Deploying to Kubernetes
 
 ### Apply Order Matters
 
@@ -482,52 +416,6 @@ kubectl port-forward service/infralens-service 9090:80 -n infralens
 
 ---
 
-## ⚠️ Mistakes I Made
-
-### Mistake 1 – containerPort mismatch
-
-```yaml
-# ❌ Wrong: App runs on 3000, not 80
-containers:
-  - name: infralens
-    image: codinggaurav/infralens:latest
-    ports:
-      - containerPort: 80   # Next.js runs on 3000!
-
-# ✅ Fix: Match the actual port the app uses
-    ports:
-      - containerPort: 3000
-```
-
-### Mistake 2 – Forgot imagePullPolicy
-
-```yaml
-# Problem: Kubernetes cached the old image, didn't pull new one
-# Fix: Add this to always pull fresh
-imagePullPolicy: Always
-```
-
-### Mistake 3 – Wrong namespace in commands
-
-```bash
-# ❌ Looked in default namespace, found nothing
-kubectl get pods
-
-# ✅ Always specify the namespace
-kubectl get pods -n infralens
-```
-
-### Mistake 4 – Port 8080 already in use
-
-```bash
-# Error during port-forward
-Error: bind: address already in use
-
-# Fix: Use a different local port
-kubectl port-forward service/infralens-service 9090:80 -n infralens
-```
-
----
 
 ## 💡 Key Concepts
 
@@ -670,17 +558,6 @@ trivy image <image>                           # Scan image
 trivy image --severity HIGH,CRITICAL <image>  # Filter severity
 trivy image --exit-code 1 <image>             # Fail on vuln (CI use)
 trivy k8s --report summary cluster           # Scan whole cluster
-```
-
-### SSH & SCP
-
-```bash
-sudo systemctl start ssh                      # Start SSH daemon
-ss -tulnp | grep 22                           # Verify SSH listening
-scp file.txt user@host:/path/                 # Copy to remote
-scp user@host:/path/file.txt ./               # Copy from remote
-scp -r ./folder user@host:/path/              # Copy folder
-ssh user@host                                 # Connect to remote
 ```
 
 ### Kubernetes
