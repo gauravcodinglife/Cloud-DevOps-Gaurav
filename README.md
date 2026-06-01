@@ -83,6 +83,18 @@ This repository documents my **practical learning journey** with real-world impl
 
 📄 **[View Documentation →](./gitlab-cicd-practical.md)**
 
+---
+
+### 🚀 5. Hands-on Kubernetes – Dockerizing & Deploying a Real App
+**Focus:** Multi-Stage Docker Builds, Security Scanning, EC2 Setup, Kubernetes Deployment
+- ✅ Dockerized a real Next.js app (InfraLens) with a multi-stage Dockerfile
+- ✅ Scanned for vulnerabilities using Trivy (14 CVEs found & triaged)
+- ✅ Configured EC2 instance via SSH and verified open ports with `ss -tulnp`
+- ✅ Wrote production Kubernetes YAMLs (Namespace, Deployment, Service)
+- ✅ Deployed 3-replica app to KIND cluster on EC2
+- ✅ Implemented `.dockerignore` and `npm ci` for reproducible, secure builds
+
+📄 **[View Documentation →](./kubernetes2.md)**
 ## 📈 Learning Journey
 
 ### #90DaysOfCloudDevOps Challenge
